@@ -12,4 +12,9 @@ program.configureHelp({
     subcommandTerm: (cmd) => cmd.name()
 });
 
+program
+  .option('-f, --format [type]', 'output format')
+//   .argument('<type>', 'output format')
+  .action((type => console.log(type)));
+
 program.parse();

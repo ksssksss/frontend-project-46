@@ -13,8 +13,9 @@ program.configureHelp({
 });
 
 program
+  .argument('<filepath1>')
+  .argument('<filepath2>')
   .option('-f, --format [type]', 'output format')
-//   .argument('<type>', 'output format')
   .action((type => console.log(type)));
 
 program.parse();
